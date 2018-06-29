@@ -1,6 +1,6 @@
-var mysql = require('mysql');
+const mysql = require('mysql');
+
 function OptPool(){
-    this.flag=true;
     this.pool = mysql.createPool({
         host: 'localhost',
         user: 'root',
