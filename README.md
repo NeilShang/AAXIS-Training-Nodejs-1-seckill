@@ -5,7 +5,9 @@ AAXIS China Training- Neil Shang
 ## Prepare
 ```bash
 1.Zookeeper & Kafka 
+```
 please refer to  [how to use Zookeeper & Kafka ](https://blog.csdn.net/u010054969/article/details/70241478)
+```bash
 2.$ npm install 
 ```
 

@@ -5,7 +5,9 @@ AAXIS China Training- Neil Shang
 ## 准备
 ```bash
 1.Zookeeper & Kafka 环境
+```
 请参考  [如何使用 Zookeeper & Kafka ](https://blog.csdn.net/u010054969/article/details/70241478)
+```bash
 2.SecKillExample 安装
 $ npm install 
 ```
