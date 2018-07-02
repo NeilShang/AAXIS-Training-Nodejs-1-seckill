@@ -6,4 +6,5 @@ class CustomController extends Controller {
         this.ctx.body = 'this is my controller'+str;
     }
 }
+
 module.exports = CustomController;
