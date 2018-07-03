@@ -17,10 +17,11 @@ var Client = kafka.Client,
     );
 consumer.on('message', function (message) {
     console.log("write in mysql")
+    console.log("33333333333"+message.value)
     pool.getConnection(function(err,conn) {
         var fecha = new Date().toString();
-        var sql = 'insert into sekillLog (fecha,status) values(?,?)';
-        var param = [fecha, 'success'];
+        var sql = 'insert into seckilllog (fecha,status,productId) values(?,?,?)';
+        var param = [fecha, 'success',message.value];
         conn.query(sql, param, function (err, rs) {
             if (err) {
                 console.log('insert err:', err.message);

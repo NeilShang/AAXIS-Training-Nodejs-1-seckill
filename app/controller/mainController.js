@@ -2,8 +2,13 @@
 const Controller = require('egg').Controller;
 class CustomController extends Controller {
     async custonIndex() {
-        let str = await this.ctx.service.seckill.show('111','222');
+        let id =  await this.ctx.query.id;
+        let str = await this.ctx.service.seckill.show(id);
         this.ctx.body = 'this is my controller'+str;
+    }
+    async getParam(){
+
+        this.ctx.body = id;
     }
 }
 

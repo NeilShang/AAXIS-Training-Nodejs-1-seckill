@@ -1,12 +1,12 @@
 const mysql = require('mysql');
-
+var mysqlConfig = require('../../config/mysqlConfig');
 function OptPool(){
     this.pool = mysql.createPool({
-        host: 'localhost',
-        user: 'root',
-        password: '520930',
-        database: 'seckill',
-        port: '3306'
+        host: mysqlConfig.host,
+        user: mysqlConfig.user,
+        password: mysqlConfig.password,
+        database: mysqlConfig.database,
+        port: mysqlConfig.port
     });
 
     this.getPool=function(){

@@ -19,21 +19,22 @@ please refer to  [how to install redis in windows environment ](https://www.cnbl
 SQL:  
 create table seckilllog(
    fecha varchar(50),
- status varchar(20)
+ status varchar(20),
+ id varchar(20)
 );
 4.$ npm install 
 ```
 
 ### How to test
 ```bash
-1.change mysql cofing in "\seckill\app\models\connectPool.js"
+1.change mysql cofing in "\seckill\app\config\mysqlConfig.js"
 2.run zookeeper
 3.run kafka
-4.start redis with this 'redis-server redis.windows.conf' in windows environment.
+4.start redis  in windows environment.
 5.creat topic "WATCH_SECKILL_GOT"
 6.use npm run dev to start
 7.visit 'http://127.0.0.1:7001/init' to init'
-8.use jmeter to test 'http://127.0.0.1:7001/seckill'
+8.use jmeter to test 'http://127.0.0.1:7001/seckill?id=XXX'
 9.reviw mysql database the new log only can be ten.
 (if you want change please change in there "\seckill\app\controller\inintController.js")
 ```

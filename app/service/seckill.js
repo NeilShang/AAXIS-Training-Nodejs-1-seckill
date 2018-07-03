@@ -12,14 +12,14 @@ var producer = new Producer(kafkaClient);
 
 
 class Seckill extends Service {
-    async show(stringA,stringB) { //异步防阻塞
-        secKillCoreProcessfunction();
-        return stringA + " and " + stringB;
+    async show(id) { //异步防阻塞
+        secKillCoreProcessfunction(id,null);
+        return  " Test " ;
     }
 }
 
-var secKillCoreProcessfunction =function(oldClient){
-    console.log("start seckill");
+var secKillCoreProcessfunction =function(id,oldClient){
+    console.log("start seckill id="+id);
     if (oldClient == 'undefined' || oldClient == null) {
         console.log("new client");
         var client = redis.createClient();
@@ -43,17 +43,16 @@ var secKillCoreProcessfunction =function(oldClient){
         multi.exec(function (err, replies) {
             if (replies == null) {
                 console.log('get the product,once again!')
-                secKillCoreProcessfunction(client);
+                secKillCoreProcessfunction(id,client);
             } else {
                 console.log('get the product');
                 var payloads = [
                     {
                         topic: 'WATCH_SECKILL_GOT',
-                        messages: 'buy 1 car',
+                        messages:id,
                         partition: 0
                     }
                 ];
-                console.log('111111111111');
                 console.log("successmessge"+payloads);
                 producer.send(payloads, function (err, data) {
                     console.log(data);
