@@ -8,7 +8,20 @@ AAXIS China Training- Neil Shang
 ```
 please refer to  [how to use Zookeeper & Kafka ](https://blog.csdn.net/u010054969/article/details/70241478)
 ```bash
-2.$ npm install 
+2.redis install and use for windows.
+```
+please refer to  [how to install redis in windows environment ](https://www.cnblogs.com/M-LittleBird/p/5902850.html)
+```bash
+3.install mysql and create table.
+```
+ [how to install mysql ](https://blog.csdn.net/wokaowokaowokao12345/article/details/76736152)
+```bash
+SQL:  
+create table seckilllog(
+   fecha varchar(50),
+ status varchar(20)
+);
+4.$ npm install 
 ```
 
 ### How to test
@@ -16,10 +29,11 @@ please refer to  [how to use Zookeeper & Kafka ](https://blog.csdn.net/u01005496
 1.change mysql cofing in "\seckill\app\models\connectPool.js"
 2.run zookeeper
 3.run kafka
-4.creat topic "WATCH_SECKILL_GOT"
-5.use npm run dev to start
-7.visit http://127.0.0.1:7001/init to init
-8.use jmeter to test
+4.start redis with this 'redis-server redis.windows.conf' in windows environment.
+5.creat topic "WATCH_SECKILL_GOT"
+6.use npm run dev to start
+7.visit 'http://127.0.0.1:7001/init' to init'
+8.use jmeter to test 'http://127.0.0.1:7001/seckill'
 9.reviw mysql database the new log only can be ten.
 (if you want change please change in there "\seckill\app\controller\inintController.js")
 ```
