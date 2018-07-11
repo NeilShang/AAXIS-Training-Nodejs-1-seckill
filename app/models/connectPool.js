@@ -1,3 +1,4 @@
+/*
 const mysql = require('mysql');
 var mysqlConfig = require('../../config/mysqlConfig');
 function OptPool(){
@@ -13,4 +14,4 @@ function OptPool(){
         return this.pool;
     }
 };
-module.exports = OptPool;
+module.exports = OptPool;*/

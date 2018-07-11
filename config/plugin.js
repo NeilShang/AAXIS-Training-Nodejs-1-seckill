@@ -1,4 +1,13 @@
 'use strict';
-
-// had enabled by egg
-// exports.static = true;
+exports.mysql = {
+  enable: true,
+  package: 'egg-mysql',
+};
+exports.kafkajs = {
+  enable: true,
+  package: 'egg-kafkajs',
+};
+exports.redis = {
+  enable: true,
+  package: 'egg-redis',
+};

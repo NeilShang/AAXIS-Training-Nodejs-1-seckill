@@ -4,7 +4,11 @@
   "description": "AAXIS Training Neil",
   "private": true,
   "dependencies": {
+    "all": "0.0.0",
     "egg": "^2.2.1",
+    "egg-kafkajs": "0.0.6",
+    "egg-kafkajs2": "^1.0.2",
+    "egg-redis": "^2.0.0",
     "egg-scripts": "^2.5.0",
     "kafka-node": "^2.6.1",
     "mysql": "^2.15.0",
@@ -16,6 +20,7 @@
     "egg-bin": "^4.3.5",
     "egg-ci": "^1.8.0",
     "egg-mock": "^3.14.0",
+    "egg-mysql": "^3.0.0",
     "eslint": "^4.11.0",
     "eslint-config-egg": "^6.0.0",
     "webstorm-disable-index": "^1.2.0"
