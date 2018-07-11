@@ -8,6 +8,7 @@
     "egg": "^2.2.1",
     "egg-kafkajs": "0.0.6",
     "egg-kafkajs2": "^1.0.2",
+    "egg-logger": "^1.7.1",
     "egg-redis": "^2.0.0",
     "egg-scripts": "^2.5.0",
     "kafka-node": "^2.6.1",

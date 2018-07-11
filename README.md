@@ -3,10 +3,11 @@
 AAXIS China Training- Neil Shang
 
 ## update Log
+```bash
 2018-07-11 
 1.add plugins  "'egg-mysql" "egg-kafkajs" "egg-redis"
 2.add test case 'npm test'
-
+```
 ## Prepare
 ```bash
 1.Zookeeper & Kafka 
@@ -32,7 +33,7 @@ create table seckilllog(
 
 ### How to test
 ```bash
-1.change mysql cofing in "\seckill\app\config\mysqlConfig.js"
+1.change mysql cofing in "config.default.js"
 2.run zookeeper
 3.run kafka
 4.start redis  in windows environment.
