@@ -2,6 +2,11 @@
 
 AAXIS China Training- Neil Shang
 
+## update Log
+2018-07-11 
+1.add plugins  "'egg-mysql" "egg-kafkajs" "egg-redis"
+2.add test case 'npm test'
+
 ## Prepare
 ```bash
 1.Zookeeper & Kafka 
